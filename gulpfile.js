@@ -1,5 +1,6 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const print = require('gulp-print');
 
 gulp.task('sass', function () {
   return gulp.src('main.scss')
