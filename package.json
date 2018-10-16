@@ -1,0 +1,19 @@
+{
+  "name": "ffbeyond",
+  "version": "1.0.0",
+  "description": "ffbeyond",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loboconcepts/ffl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loboconcepts/ffl/issues"
+  },
+  "homepage": "https://github.com/Loboconcepts/ffl#readme"
+}
