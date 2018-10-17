@@ -5,5 +5,20 @@
 </head>
 <body>
 Hi
+
+<script type="text/javascript">
+(function(){
+  const nflPlayers = 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
+  fetch(nflPlayers).then(response => {
+	return response.json();
+	}).then(data => {
+		console.log(data);
+	console.log(data);
+	}).catch(err => {
+	// Do something for an error here
+	});
+
+})();
+</script>
 </body>
 </html>
