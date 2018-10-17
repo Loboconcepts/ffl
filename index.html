@@ -4,28 +4,49 @@
 	<title></title>
 </head>
 <body>
-2552374
+	<select id="whichValue">
+		<option value="name">Name</option>
+	</select>
+	<input id="value">
+	<button id="button">Search</button>
+	<div id="results"></div>
+
 
 <script type="text/javascript">
-function loopThroughById(array, value) {
+function loopThroughByKey(key, array, value, returnValue) {
 	let i = 0;
 	for (i=0;i<array.length;i++) {
-		if (value == array[i].id) {
-			return array[i].name;
+		if (value == array[i][key]) {
+			return array[i][returnValue];
 		};
 	};
 };
+document.getElementById("button").addEventListener("click", function() {
+	searchPlayerInfo(document.getElementById("value").value,document.getElementById("whichValue").value);
+});
+
 (function(){
   const nflPlayers = 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
   fetch(nflPlayers).then(response => {
 	return response.json();
 	}).then(data => {
-		console.log(loopThroughById(data.players, "2552374"));
+		console.log(loopThroughByKey("id", data.players, "2552374", "name"));
 	}).catch(err => {
 		console.log("you fucked up");
 	});
 
 })();
+
+function searchPlayerInfo(value, whichValue) {
+	const nflPlayers = 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
+	fetch(nflPlayers).then(response => {
+	return response.json();
+	}).then(data => {
+		document.getElementById("results").innerHTML = loopThroughByKey(whichValue, data.players, value, "id");
+	}).catch(err => {
+		console.log("you fucked up");
+	});
+}
 </script>
 </body>
 </html>
