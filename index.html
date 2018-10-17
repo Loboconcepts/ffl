@@ -5,8 +5,26 @@
 	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
+	2504211
+
+<br>1: games played?
+<br>2. pass attempts
+<br>3. pass completions
+<br>4. ?
+<br>5. pass yards
+<br>6. pass touchdowns
+<br>7. interceptions
+<br>8. sacks
+<br>9. 
+<br>13. rush attempts
+<br>14. rush yards
+<br>15. rushing touchdowns
+<br>30. fumbles lost
+<br>31. fumbles
+<br><br>
 	<select id="whichValue">
 		<option value="name">Name</option>
+		<option value="id">ID</option>
 	</select>
 	<input id="value">
 	<button id="button">Search</button>
@@ -45,9 +63,16 @@ document.getElementById("button").addEventListener("click", function() {
 
 // })();
 
+var weeklyFantasyStats = function(week) {
+	return 'http://api.fantasy.nfl.com/v1/players/weekstats?week='+week+'&format=json'
+};
+
+var nflPlayers = function(week) {
+	return 'https://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week='+week+'&format=json'
+};
+
 function searchPlayerInfo(value, whichValue) {
-	const nflPlayers = 'https://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
-	fetch(nflPlayers).then(response => {
+	fetch(nflPlayers(6)).then(response => {
 	return response.json();
 	}).then(data => {
 		document.getElementById("results").innerHTML = loopThroughByKey(whichValue, data.players, value);
@@ -58,3 +83,5 @@ function searchPlayerInfo(value, whichValue) {
 </script>
 </body>
 </html>
+
+<!-- "2504211":{"1":"1","2":"35","3":"24","4":"11","5":"340","6":"1","8":"2","9":"1","13":"3","14":"2","15":"1","30":"1","31":"2"} -->
