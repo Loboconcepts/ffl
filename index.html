@@ -45,7 +45,7 @@ document.getElementById("button").addEventListener("click", function() {
 // })();
 
 function searchPlayerInfo(value, whichValue) {
-	const nflPlayers = 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
+	const nflPlayers = 'https://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
 	fetch(nflPlayers).then(response => {
 	return response.json();
 	}).then(data => {
