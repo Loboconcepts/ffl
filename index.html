@@ -4,18 +4,25 @@
 	<title></title>
 </head>
 <body>
-Hi
+2552374
 
 <script type="text/javascript">
+function loopThroughById(array, value) {
+	let i = 0;
+	for (i=0;i<array.length;i++) {
+		if (value == array[i].id) {
+			return array[i].name;
+		};
+	};
+};
 (function(){
   const nflPlayers = 'http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week=1&format=json'
   fetch(nflPlayers).then(response => {
 	return response.json();
 	}).then(data => {
-		console.log(data);
-	console.log(data);
+		console.log(loopThroughById(data.players, "2552374"));
 	}).catch(err => {
-	// Do something for an error here
+		console.log("you fucked up");
 	});
 
 })();
