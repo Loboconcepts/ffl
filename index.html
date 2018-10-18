@@ -32,6 +32,8 @@
 
 
 <script type="text/javascript">
+
+// Gets data from the API via the fetch function and uses a For loop to find the requested data
 function loopThroughByKey(key, array, value, returnValue) {
 	let i = 0;
 	for (i=0;i<array.length;i++) {
@@ -47,6 +49,8 @@ function loopThroughByKey(key, array, value, returnValue) {
 		};
 	};
 };
+
+// event listener on button to run "searchPlayerInfo function"
 document.getElementById("button").addEventListener("click", function() {
 	searchPlayerInfo(document.getElementById("value").value,document.getElementById("whichValue").value);
 });
@@ -71,6 +75,7 @@ var nflPlayers = function(week) {
 	return 'https://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2018&week='+week+'&format=json'
 };
 
+// Loads the api and runs the 'loopThroughByKey' function
 function searchPlayerInfo(value, whichValue) {
 	fetch(nflPlayers(6)).then(response => {
 	return response.json();
