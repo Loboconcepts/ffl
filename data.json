@@ -1,6 +1,6 @@
 [
     {
-        "user_id": "U1111111",
+        "league_id": "U1111111",
         "user_email": "bob@aol.com",
         "first_name": "Bob",
         "last_name": "Labla",
@@ -21,15 +21,30 @@
                 "team_rosters" : [
                     [null,null,null,null,null,null,null,null,null],
                     [null,null,null,null,null,null,null,null,null]
+                ],
+                "budgets" : [
+                    [100,95],
+                    [100,99]
                 ]
             }
         }
-    },
+    }
+]
+
+
+[
     {
-        "user_id": "U1111112",
-        "user_email": "jim@aol.com",
-        "first_name": "Jim",
-        "last_name": "Bo",
+        "league_id" : "L110011",
+        "user_id" : "U1111111",
+        "info" : {
+            "league_name" : "Dolfans",
+            "team_name" : "Egg Salad",
+            "team_roster" : ""
+
+        }
+        "user_email": "bob@aol.com",
+        "first_name": "Bob",
+        "last_name": "Labla",
         "leagues" : {
             "league_id": [
                 "L110011",
@@ -41,12 +56,16 @@
             ],
             "teams" : {
                 "team_names" : [
-                    "Smithwish",
-                    "TinyTim"
+                    "Egg_salads",
+                    "Moons over My Hammy"
                 ],
                 "team_rosters" : [
                     [null,null,null,null,null,null,null,null,null],
                     [null,null,null,null,null,null,null,null,null]
+                ],
+                "budgets" : [
+                    [100,95],
+                    [100,99]
                 ]
             }
         }
