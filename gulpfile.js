@@ -24,3 +24,5 @@ gulp.task('dynamodb', function() {
     .pipe(exec('java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb', options))
     .pipe(exec.reporter(reportOptions));
 });
+
+//aws dynamodb list-tables --endpoint-url http://localhost:8000
