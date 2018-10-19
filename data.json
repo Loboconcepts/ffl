@@ -1,0 +1,54 @@
+[
+    {
+        "user_id": "U1111111",
+        "user_email": "bob@aol.com",
+        "first_name": "Bob",
+        "last_name": "Labla",
+        "leagues" : {
+            "league_id": [
+                "L110011",
+                "L112211"
+            ],
+            "league_names" : [
+                "Dolfans",
+                "Chan_batay"
+            ],
+            "teams" : {
+                "team_names" : [
+                    "Egg_salads",
+                    "Moons over My Hammy"
+                ],
+                "team_rosters" : [
+                    [null,null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null,null]
+                ]
+            }
+        }
+    },
+    {
+        "user_id": "U1111112",
+        "user_email": "jim@aol.com",
+        "first_name": "Jim",
+        "last_name": "Bo",
+        "leagues" : {
+            "league_id": [
+                "L110011",
+                "L112211"
+            ],
+            "league_names" : [
+                "Dolfans",
+                "Chan_batay"
+            ],
+            "teams" : {
+                "team_names" : [
+                    "Smithwish",
+                    "TinyTim"
+                ],
+                "team_rosters" : [
+                    [null,null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null,null]
+                ]
+            }
+        }
+    }
+]
