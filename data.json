@@ -1,6 +1,6 @@
 [
     {
-        "league_id": "U1111111",
+        "user_id": "U1111111",
         "user_email": "bob@aol.com",
         "first_name": "Bob",
         "last_name": "Labla",
@@ -41,7 +41,7 @@
             "team_name" : "Egg Salad",
             "team_roster" : ""
 
-        }
+        },
         "user_email": "bob@aol.com",
         "first_name": "Bob",
         "last_name": "Labla",

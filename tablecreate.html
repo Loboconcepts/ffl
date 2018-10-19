@@ -18,7 +18,7 @@ var dynamodb = new AWS.DynamoDB();
 
 function createMovies() {
     var params = {
-        TableName : "Movies",
+        TableName : "FantasyFootball",
         KeySchema: [
             { AttributeName: "year", KeyType: "HASH"},
             { AttributeName: "title", KeyType: "RANGE" }
